@@ -1,2 +1,2 @@
 # DevSpace
-Static pages for http://devspace.com/ project
+Static pages for https://devspace.com.ua/ project
