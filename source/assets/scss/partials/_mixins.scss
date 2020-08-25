@@ -1,0 +1,90 @@
+@mixin for-mobile-up {
+	@media (min-width: 375px) {
+		@content;
+	}
+}
+
+@mixin for-desktop-up {
+	@media (min-width: 992px) {
+		@content;
+	}
+}
+
+@mixin for-desktop-up-large {
+	@media (min-width: 1200px) {
+		@content;
+	}
+}
+
+@mixin for-desktop-down {
+	@media (max-width: 991px) {
+		@content;
+	}
+}
+
+@mixin for-desktop-up-large-l {
+	@media (min-width: 1366px) {
+		@content;
+	}
+}
+
+@mixin icon-colors($fallback) {
+	fill: $fallback;
+	@supports (--css: variables) {
+		@content;
+	}
+}
+
+/*** Styles added to fix the issue with zoom in on iphone ***/
+/* device-aspect-ratio: 2/3 - iPhone < 5 */
+/* device-aspect-ratio: 40/71 - iPhone 5, 5C, 5S, iPod Touch 5g */
+/* device-aspect-ratio: 375/667 - iPhone 6, iPhone 6s, iPhone 7 portrait/landscape */
+/* device-aspect-ratio: 9/16 - iPhone 6 Plus, iPhone 6s Plus, iPhone 7 Plus portrait/landscape */
+@mixin disable-input-zoom {
+	@media screen and (device-aspect-ratio: 2/3), screen and (device-aspect-ratio: 40/71), screen and (device-aspect-ratio: 375/667), screen and (device-aspect-ratio: 9/16) {
+		@content;
+	}
+}
+
+@function is-valid-length($value) {
+	@return (type-of($value) == "number" and not unitless($value)) or (index(auto initial inherit 0, $value) != false);
+}
+
+@mixin position($position, $args: ()) {
+	$offsets: top right bottom left;
+	position: $position;
+
+	@each $offset in $offsets {
+		$index: index($args, $offset);
+
+		@if $index {
+			@if $index == length($args) {
+				#{$offset}: 0;
+			}
+			@else {
+				$next: nth($args, $index + 1);
+				@if is-valid-length($next) {
+					#{$offset}: $next;
+				}
+				@else if index($offsets, $next) {
+					#{$offset}: 0;
+				}
+				@else {
+					@warn "Invalid value `#{$next}` for offset `#{$offset}`.";
+				}
+			}
+		}
+	}
+}
+
+@mixin absolute($args: ()) {
+	@include position(absolute, $args);
+}
+
+@mixin fixed($args: ()) {
+	@include position(fixed, $args);
+}
+
+@mixin relative($args: ()) {
+	@include position(relative, $args);
+}
