@@ -1,11 +1,3 @@
-html {
-	height: 100%;
-	//font-size: 1.110100vw;
-	//@media (max-width: 1200px) {
-	//	font-size: 16px;
-	//}
-}
-
 body {
 	font-family: $base-font-family;
 	font-size: $base-font-size;
@@ -13,6 +5,10 @@ body {
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
+}
+
+.main-wrapper {
+	flex: 1;
 }
 
 .wrapper {
@@ -26,6 +22,16 @@ body {
 
 .disabled-scroll {
 	overflow-y: hidden;
+}
+
+.visually-hidden:not(:focus):not(:active) {
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+	clip: rect(1px 1px 1px 1px);
+	clip: rect(1px, 1px, 1px, 1px);
+	white-space: nowrap;
 }
 
 #__bs_notify__ {

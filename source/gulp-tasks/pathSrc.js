@@ -16,7 +16,7 @@ export const publicSource = {
 export const devSource = {
 	baseInputCss   : 'assets/html/base/partials/front/dist/css.html',
 	baseInputJs    : 'assets/html/base/partials/front/dist/js.html',
-	scssPages      : 'assets/scss/_page-styles/*.scss',
+	scssPages      : 'assets/scss/**/*.scss',
 	jsPages        : 'assets/js/_page-scripts/*.js',
 	htmlSource     : 'assets/html/*.html',
 	htmlBase       : 'assets/html/base',

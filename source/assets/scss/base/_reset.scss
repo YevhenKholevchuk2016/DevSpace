@@ -2,12 +2,13 @@ html {
 	box-sizing: border-box;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
 	box-sizing: inherit;
 }
 
 html {
-	-ms-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
 }
 
@@ -21,18 +22,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 	border: 0 none;
 }
 
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-main,
-menu,
-nav,
-section,
-summary {
+article, aside, details, figcaption, figure, footer, header, main, menu, nav, section, summary {
 	display: block;
 }
 
@@ -50,7 +40,6 @@ audio:not([controls]) {
 
 a {
 	background-color: transparent;
-	-webkit-text-decoration-skip: objects;
 }
 
 abbr[title] {
@@ -61,22 +50,21 @@ abbr[title] {
 
 b,
 strong {
-	font-weight: inherit;
-}
-
-b,
-strong {
 	font-weight: bolder;
 }
 
-dfn {font-style: italic;}
-
-mark {
-	background-color: #ff0;
-	color: #000;
+dfn {
+	font-style: italic;
 }
 
-svg:not(:root) {overflow: hidden;}
+mark {
+	background-color: #ffff00;
+	color: #000000;
+}
+
+svg:not(:root) {
+	overflow: hidden;
+}
 
 code,
 kbd,
@@ -111,7 +99,7 @@ select {
 }
 
 button,
-html [type="button"],
+[type="button"],
 [type="reset"],
 [type="submit"] {
 	-webkit-appearance: button;
@@ -125,7 +113,9 @@ a {
 	-webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
-address { font-style: normal; }
+address {
+	font-style: normal;
+}
 
 a:focus,
 select:focus,
@@ -170,7 +160,8 @@ a:hover {
 	text-decoration: none;
 }
 
-a[href="javascript:void();"] {
+a[href="javascript:void();"],
+a[href="javascript:"] {
 	cursor: default;
 }
 
@@ -259,17 +250,7 @@ textarea {
 	overflow: auto;
 }
 
-::-webkit-input-placeholder {
-	color: #777777;
-	line-height: normal;
-}
-
-::-moz-placeholder {
-	color: #777777;
-	opacity: 1;
-}
-
-:-ms-input-placeholder {
+::placeholder {
 	color: #777777;
 	line-height: normal;
 }
