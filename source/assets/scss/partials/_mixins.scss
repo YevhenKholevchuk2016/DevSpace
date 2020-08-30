@@ -4,6 +4,12 @@
 	}
 }
 
+@mixin for-laptop-up {
+	@media (min-width: 768px) {
+		@content;
+	}
+}
+
 @mixin for-desktop-down {
 	@media (max-width: 991px) {
 		@content;

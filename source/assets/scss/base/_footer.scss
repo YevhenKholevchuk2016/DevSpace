@@ -1,3 +1,40 @@
 .main-footer {
+	background-color: #3f51b4;
 
+	&__wrapper {
+		text-align: center;
+		padding-top: 16px;
+		padding-bottom: 16px;
+	}
+
+	@include for-laptop-up {
+
+		&__menu {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+	}
+
+	&__menu-item {
+		padding-top: 4px;
+		padding-bottom: 4px;
+
+		@include for-laptop-up {
+			padding-left: 9px;
+			padding-right: 9px;
+		}
+	}
+
+	&__link {
+		display: block;
+		line-height: 25px;
+		color: rgba(#ffffff, .5);
+	}
+
+	&__copyright {
+		display: block;
+		margin-top: 20px;
+		color: rgba(#ffffff, .5);
+	}
 }
