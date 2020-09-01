@@ -26,13 +26,11 @@ const reload = done => {
 task('serve', () => {
 	browserSync.init({
 		server: {
-			baseDir: './../public/'
+			baseDir: devSource.browserSyncBaseDir,
+			index: devSource.browserSyncIndex
 		},
 		port: 9005
 	});
-
-	// watch any changes in .html, .css, .js files and reload browser
-	browserSync.watch(watchSource.html).on('change', () => reload);
 });
 
 // compile sass into CSS dev

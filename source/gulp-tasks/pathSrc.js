@@ -14,18 +14,20 @@ export const publicSource = {
 };
 
 export const devSource = {
-	baseInputCss   : 'assets/html/base/partials/front/dist/css.html',
-	baseInputJs    : 'assets/html/base/partials/front/dist/js.html',
-	scssPages      : 'assets/scss/**/*.scss',
-	jsPages        : 'assets/js/_page-scripts/*.js',
-	htmlSource     : 'assets/html/*.html',
-	htmlBase       : 'assets/html/base',
-	json           : 'assets/json/**/*',
-	images         : 'assets/images/**/*.+(png|jpg|gif|svg|ico)',
-	excludeSprites : '!assets/images/sprites/**/*',
-	excludeFavicon : '!assets/images/favicon/**/*',
-	favicon        : 'assets/images/favicon/favicon.svg',
-	svgSprite      : 'assets/images/sprites/icons/svg/*.svg'
+	baseInputCss       : 'assets/html/base/partials/front/dist/css.html',
+	baseInputJs        : 'assets/html/base/partials/front/dist/js.html',
+	scssPages          : 'assets/scss/**/*.scss',
+	jsPages            : 'assets/js/_page-scripts/*.js',
+	htmlSource         : 'assets/html/*.html',
+	htmlBase           : 'assets/html/base',
+	json               : 'assets/json/**/*',
+	images             : 'assets/images/**/*.+(png|jpg|gif|svg|ico)',
+	excludeSprites     : '!assets/images/sprites/**/*',
+	excludeFavicon     : '!assets/images/favicon/**/*',
+	favicon            : 'assets/images/favicon/favicon.svg',
+	svgSprite          : 'assets/images/sprites/icons/svg/*.svg',
+	browserSyncBaseDir : '../public/',
+	browserSyncIndex   : 'companies-list.html',
 };
 
 export const watchSource = {

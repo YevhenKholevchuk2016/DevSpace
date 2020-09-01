@@ -4,9 +4,9 @@
 	"description": "",
 	"main": "gulpfile.babel.js",
 	"scripts": {
-		"start": "NODE_ENV=start node start.js && npm i && gulp build",
-		"dev": "NODE_ENV=dev node start.js && npm rebuild node-sass && gulp",
-		"build": "NODE_ENV=prod node start.js && npm rebuild node-sass && gulp build"
+		"start": "NODE_ENV=start npm i && gulp build",
+		"dev": "NODE_ENV=dev npm rebuild node-sass && gulp",
+		"build": "NODE_ENV=prod npm rebuild node-sass && gulp build"
 	},
 	"babel": {
 		"presets": [
