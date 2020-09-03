@@ -14,27 +14,6 @@
 	box-shadow: 0 0 16px 0 rgba(0, 0, 0, .16);
 	transition: background-color .225s ease;
 
-	&--big {
-		font-size: 20px;
-		line-height: 56px;
-		height: 56px;
-	}
-
-	&--small {
-		height: 32px;
-		line-height: 32px;
-	}
-
-	&--yellow {
-		color: #000000;
-		background-color: #fdcf17;
-
-		&:hover,
-		&:active {
-			background-color: darken(#fdcf17, 5%);
-		}
-	}
-
 	&--blue {
 		color: #ffffff;
 		background-color: $primary-blue;
