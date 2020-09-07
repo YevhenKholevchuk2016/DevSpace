@@ -9,8 +9,10 @@
 	transition-property: opacity,filter;
 	text-transform: none;
 	color: inherit;
-	border: 0;
+	border: 2px solid transparent;
+	border-radius: 50%;
 	background-color: transparent;
+	transition: border-color .22s ease;
 
 	.hamburger-box {
 		position: relative;
@@ -53,17 +55,18 @@
 		transition-duration: .15s;
 		transition-property: transform;
 		border-radius: 4px;
-		background-color: #fff;
+		background-color: $header-color;
 	}
 
 	&.is-active {
+		border-color: $header-color;
 
 		.hamburger-inner {
-			background-color: #fff;
+			background-color: $header-color;
 
 			&:before,
 			&:after {
-				background-color: #fff;
+				background-color: $header-color;
 			}
 		}
 	}

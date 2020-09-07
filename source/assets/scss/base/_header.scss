@@ -2,11 +2,21 @@
 	flex-shrink: 0;
 	min-height: $header-height;
 	background-color: #7388ff;
+	transition: min-height .225s ease;
+
+	@include for-laptop-up {
+		min-height: $header-height-desktop;
+	}
 
 	&__wrapper {
 		display: flex;
 		align-items: center;
 		min-height: $header-height;
+		transition: min-height .225s ease;
+
+		@include for-laptop-up {
+			min-height: $header-height-desktop;
+		}
 	}
 
 	&__logo-link {
@@ -24,7 +34,6 @@
 		z-index: 1;
 		overflow: auto;
 		background-color: transparent;
-		padding: 8px 32px;
 		opacity: 0;
 		pointer-events: none;
 		transition: opacity .225s ease;
@@ -49,6 +58,8 @@
 			background: transparent;
 			height: inherit;
 			overflow: visible;
+			margin-left: auto;
+			margin-right: 22px;
 		}
 	}
 
@@ -58,6 +69,41 @@
 		@include for-laptop-up {
 			display: flex;
 			height: inherit;
+		}
+	}
+
+	&__nav-link {
+		font-size: 20px;
+		color: #606060;
+		text-align: center;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		min-height: 78px;
+		border-bottom: 1px solid rgba(#d8d8d8, .48);
+
+		@include for-laptop-up {
+			font-size: 16px;
+			color: $header-color;
+			padding-left: 12px;
+			padding-right: 12px;
+			min-height: $header-height-desktop;
+			border: 0 none;
+			transition: color .225s ease;
+
+			&:hover {
+				color: lighten($header-color, 10%)
+			}
+		}
+	}
+
+	&__lang-select {
+		margin-left: auto;
+		margin-right: 10px;
+
+		@include for-laptop-up {
+			margin-left: 0;
+			margin-right: 0;
 		}
 	}
 

@@ -30,7 +30,15 @@
 	&__link {
 		display: block;
 		line-height: 25px;
-		color: rgba(#ffffff, .5);
+		color: $header-color;
+		transition: color .225s ease;
+
+		@include for-laptop-up {
+
+			&:hover {
+				color: lighten($header-color, 10%)
+			}
+		}
 	}
 
 	&__copyright {

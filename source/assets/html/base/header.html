@@ -10,20 +10,26 @@
 		<nav class="main-header__nav">
 			<ul class="main-header__nav-items">
 				<li class="main-header__nav-item">
-					<a class="main-header__nav-link" href="/about">about</a>
+					<a class="main-header__nav-link" href="/about">Про проект</a>
 				</li>
 				<li class="main-header__nav-item">
-					<a class="main-header__nav-link" href="/faq">faq</a>
+					<a class="main-header__nav-link" href="/faq">FAQ</a>
 				</li>
 			</ul>
 		</nav>
-		<label class="visually-hidden" for="language-select">Оберіть мову</label>
-		<select id="language-select" class="main-header__lang">
-			<option value="uk">UA</option>
-			<option value="en">EN</option>
-			<option value="ru">RU</option>
-			<option value="am">AM</option>
-		</select>
+		<label class="visually-hidden"
+		       for="language-select"
+		>Оберіть мову</label>
+		<div class="custom-select main-header__lang-select">
+			<select id="language-select"
+			        class="custom-select__select"
+			>
+				<option value="uk">UA</option>
+				<option value="en">EN</option>
+				<option value="ru">RU</option>
+				<option value="am">AM</option>
+			</select>
+		</div>
 		<button class="hamburger hamburger--spin main-header__hamburger js-hamburger"
 		        type="button"
 		        aria-expanded="false"
