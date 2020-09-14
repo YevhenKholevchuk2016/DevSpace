@@ -4,8 +4,26 @@
 	"page-description": "Список компаній",
 	"style": "companies-list.html"
 })
-
-<p>Companies List</p>
+<section class="companies">
+	<div class="wrapper companies__wrapper">
+		<div class="search companies__search">
+			<label class="visually-hidden"
+			       for="company-search"
+			>Пошук компанії по назві</label>
+			<button class="search__button" type="button">
+				<svg class="custom-icon search__button-icon">
+					<use xlink:href="assets/images/sprites/icons/symbols.svg#icon-search"></use>
+				</svg>
+				<span class="search__button-text">Знайти компанію</span>
+			</button>
+			<input id="company-search"
+			       class="search__input"
+			       type="text"
+			       placeholder="Назва компанії"
+			>
+		</div>
+	</div>
+</section>
 
 @@include('footer.html', {
 	"script": "companies-list.html"

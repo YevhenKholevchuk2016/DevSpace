@@ -28,8 +28,7 @@ task('serve', () => {
 		server: {
 			baseDir: devSource.browserSyncBaseDir,
 			index: devSource.browserSyncIndex
-		},
-		port: 9005
+		}
 	});
 });
 
