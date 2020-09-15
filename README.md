@@ -9,7 +9,7 @@ Static pages for https://devspace.com.ua/ project
 6. 07.09.2020 - 08.09.2020 ---> Start at 23:30 - Finish at 01:30 --- 2h<br/>
 7. 14.09.2020 - 15.09.2020 ---> Start at 23:30 - Finish at 01:30 --- 2h<br/>
 8. 15.09.2020 - 15.09.2020 ---> Start at 10:30 - Finish at 11:30 --- 1h<br/>
-SUM = 11 hours<br/><br/>
+SUM = 12 hours<br/><br/>
 
 https://webdevmaster2016.github.io/DevSpace/public/companies-list.html
 
