@@ -1,0 +1,15 @@
+.company-preview {
+	$this: &;
+
+	padding-top: 24px;
+	padding-bottom: 24px;
+	padding-left: 18px;
+	padding-right: 18px;
+	border-radius: 8px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.135216);
+
+	&__logo {
+		max-width: 100%;
+		height: auto;
+	}
+}

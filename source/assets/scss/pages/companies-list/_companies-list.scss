@@ -1,4 +1,5 @@
 .companies {
+	$this: &;
 
 	&__wrapper {
 		padding-top: 16px;
@@ -8,5 +9,41 @@
 			padding-top: 64px;
 			padding-bottom: 72px;
 		}
+	}
+
+	&__found {
+		margin-top: 32px;
+	}
+
+	&__list {
+		margin-top: 16px;
+	}
+
+	&__list-item {
+
+		& + #{$this}__list-item {
+			margin-top: 32px;
+		}
+	}
+
+	&__btn-more {
+		display: flex;
+		height: 48px;
+		max-width: 370px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 32px;
+
+		&:hover {
+
+			#{$this}__btn-more-icon {
+				color: #ffffff;
+			}
+		}
+	}
+
+	&__btn-more-icon {
+		color: #828282;
+		margin-right: 20px;
 	}
 }

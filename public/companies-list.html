@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html class="page-root" lang="uk">
+<head>
+    <title>Список компаній</title>
+    <meta name="description" content="Список компаній">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+
+    <meta name="robots" content="noindex,nofollow">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+
+    <link href="assets/css/common.css" rel="stylesheet" />
+    <link href="assets/css/companies-list.css" rel="stylesheet" />
+</head>
+<body>
+<header class="main-header">
+	<div class="wrapper main-header__wrapper">
+		<a class="main-header__logo-link"
+		   href="/"
+		>
+			<img alt="Site Logo"
+			     src="assets/images/logo.svg"
+			>
+		</a>
+		<nav class="main-header__nav">
+			<ul class="main-header__nav-items">
+				<li class="main-header__nav-item">
+					<a class="main-header__nav-link" href="/about">Про проект</a>
+				</li>
+				<li class="main-header__nav-item">
+					<a class="main-header__nav-link" href="/faq">FAQ</a>
+				</li>
+			</ul>
+		</nav>
+		<label class="visually-hidden"
+		       for="language-select"
+		>Оберіть мову</label>
+		<div class="custom-select main-header__lang-select">
+			<select id="language-select"
+			        class="custom-select__select"
+			>
+				<option value="uk">UA</option>
+				<option value="en">EN</option>
+				<option value="ru">RU</option>
+				<option value="am">AM</option>
+			</select>
+		</div>
+		<button class="hamburger hamburger--spin main-header__hamburger js-hamburger"
+		        type="button"
+		        aria-expanded="false"
+		        aria-label="Open the menu"
+		>
+            <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+            </span>
+		</button>
+	</div>
+</header>
+<main class="main-wrapper">
+<section class="companies">
+	<div class="wrapper companies__wrapper">
+
+		<!-- Search block -->
+		<div class="search companies__search">
+			<label class="visually-hidden"
+			       for="company-search"
+			>Пошук компанії по назві</label>
+			<button class="custom-btn custom-btn--blue search__button" type="button">
+				<svg class="custom-icon search__button-icon">
+					<use xlink:href="assets/images/sprites/icons/symbols.svg#icon-search"></use>
+				</svg>
+				<span class="search__button-text">Знайти компанію</span>
+			</button>
+			<input id="company-search"
+			       class="search__input"
+			       type="text"
+			       placeholder="Назва компанії"
+			>
+		</div>
+		<!-- /Search block -->
+
+		<p class="companies__found">Знайдено компаній: 381</p>
+
+		<!-- Companies list -->
+		<div class="companies__list">
+
+			<!-- Company preview -->
+			<div class="companies__list-item company-preview">
+				<figure>
+					<img class="company-preview__logo" src="assets/images/logos/levi9-logo.png" alt="Levi9">
+				</figure>
+				<h2>Levi9</h2>
+				<p>
+					<svg class="custom-icon">
+						<use xlink:href="assets/images/sprites/icons/symbols.svg#icon-badge"></use>
+					</svg>
+					Аутсорс компанія
+				</p>
+				<p>
+					<svg class="custom-icon">
+						<use xlink:href="assets/images/sprites/icons/symbols.svg#icon-site"></use>
+					</svg>
+					<a href="https://www.levi9.com/">www.levi9.com</a>
+				</p>
+				<p>
+					<svg class="custom-icon">
+						<use xlink:href="assets/images/sprites/icons/symbols.svg#icon-flag"></use>
+					</svg>
+					Офіси компанії: 🇳🇱 🇷🇸 🇷🇴 🇺🇦
+				</p>
+			</div>
+			<!-- /Company preview -->
+
+			<!-- Company preview -->
+			<div class="companies__list-item company-preview">
+				<figure>
+					<img class="company-preview__logo" src="assets/images/logos/globallogic-logo.svg" alt="Levi9">
+				</figure>
+				<h2>GlobalLogic</h2>
+				<p>
+					<svg class="custom-icon">
+						<use xlink:href="assets/images/sprites/icons/symbols.svg#icon-badge"></use>
+					</svg>
+					Аутсорс компанія
+				</p>
+				<p>
+					<svg class="custom-icon">
+						<use xlink:href="assets/images/sprites/icons/symbols.svg#icon-site"></use>
+					</svg>
+					<a href="https://www.globallogic.com/ua">https://www.globallogic.com/ua</a>
+				</p>
+				<p>
+					<svg class="custom-icon">
+						<use xlink:href="assets/images/sprites/icons/symbols.svg#icon-flag"></use>
+					</svg>
+					Офіси компанії: 🇺🇸 🇺🇦
+				</p>
+			</div>
+			<!-- /Company preview -->
+
+		</div>
+		<!-- /Companies list -->
+
+		<!-- Show more button -->
+		<button class="custom-btn custom-btn--border-gray companies__btn-more"
+		        type="button"
+		>
+			<svg class="custom-icon companies__btn-more-icon">
+				<use xlink:href="assets/images/sprites/icons/symbols.svg#icon-load"></use>
+			</svg>
+			Показати ще 6 компаній
+		</button>
+		<!-- /Show more button -->
+
+	</div>
+</section>
+
+</main>
+<footer class="main-footer">
+	<div class="wrapper main-footer__wrapper">
+		<ul class="main-footer__menu">
+			<li class="main-footer__menu-item">
+				<a class="main-footer__link" href="/">Головна</a>
+			</li>
+			<li class="main-footer__menu-item">
+				<a class="main-footer__link" href="/about">Про проект</a>
+			</li>
+			<li class="main-footer__menu-item">
+				<a class="main-footer__link" href="/faq">FAQ</a>
+			</li>
+			<li class="main-footer__menu-item">
+				<a class="main-footer__link" href="/discussions">Обговорення</a>
+			</li>
+			<li class="main-footer__menu-item">
+				<a class="main-footer__link" href="/alternatives">Альтернативи</a>
+			</li>
+			<li class="main-footer__menu-item">
+				<a class="main-footer__link" href="/roadmap">Технічні плани по проекту або Roadmap</a>
+			</li>
+		</ul>
+		<small class="main-footer__copyright">&copy; DevSpace 2020</small>
+	</div>
+</footer>
+<script src="assets/js/common.js"></script>
+<script src="assets/js/companies-list.js"></script>
+</body>
+</html>

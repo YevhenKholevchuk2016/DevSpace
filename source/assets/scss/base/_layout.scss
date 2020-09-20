@@ -1,5 +1,5 @@
 html {
-	height: -webkit-fill-available;
+	height: fill-available;
 }
 
 body {
@@ -9,7 +9,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
-	min-height: -webkit-fill-available;
+	min-height: fill-available;
 }
 
 .main-wrapper {

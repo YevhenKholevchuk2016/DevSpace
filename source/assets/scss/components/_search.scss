@@ -11,34 +11,31 @@
 
 	@include for-laptop-up {
 		position: relative;
-		padding-right: 267px;
+		padding-right: 286px;
 	}
 
 	&__button {
 		flex-shrink: 0;
 		margin-right: 8px;
+		background-color: transparent;
+		border: 0 none;
+		height: auto;
+		width: auto;
 
 		@include for-laptop-up {
+			font-size: 18px;
 			position: absolute;
 			right: 0;
 			top: 0;
-			padding-left: 40px;
-			padding-right: 40px;
-			background-color: #7388ff;
-			height: inherit;
-			display: flex;
-			align-items: center;
-			justify-content: center;
+			height: 48px;
+			width: 270px;
 			order: 1;
 			margin-right: 0;
-			cursor: pointer;
+			background-color: $primary-blue;
+			border-color: $primary-blue;
+			border-radius: 0;
 			border-top-right-radius: 8px;
 			border-bottom-right-radius: 8px;
-			transition: background-color .225s ease;
-
-			&:hover {
-				background-color: darken(#7388ff, 10%);
-			}
 		}
 	}
 
