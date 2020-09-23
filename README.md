@@ -1,6 +1,11 @@
 # DevSpace
 Static pages for https://devspace.com.ua/ project
 
+|    | Data From    | Date To     | Start  | Finish | Hours |
+| -- | ------------ | ----------- | ------ | ------ | ----- |
+| 1  | 25.08.2020   | 26.08.2020  | 23:00  | 01:00  | 2h    |
+| 2  | 27.08.2020   | 28.08.2020  | 01:00  | 02:00  | 1h    |
+
 1. 25.08.2020 - 26.08.2020 ---> Start at 23:00 - Finish at 01:00 --- 2h<br/>
 2. 27.08.2020 - 28.08.2020 ---> Start at 01:00 - Finish at 02:00 --- 1h<br/>
 3. 30.08.202 ---> Start at 15:00 - Finish at 16:00 --- 1h<br/>
