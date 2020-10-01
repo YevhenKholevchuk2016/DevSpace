@@ -1,5 +1,5 @@
 html {
-	height: fill-available;
+	height: -webkit-fill-available;
 }
 
 body {
@@ -9,7 +9,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
-	min-height: fill-available;
+	min-height: -webkit-fill-available;
 }
 
 .main-wrapper {
@@ -17,12 +17,17 @@ body {
 }
 
 .wrapper {
-	max-width: 1170px;
+	max-width: 1304px;
 	width: 100%;
 	padding-left: 16px;
 	padding-right: 16px;
 	margin-left: auto;
 	margin-right: auto;
+
+	@include for-laptop-up {
+		padding-left: 24px;
+		padding-right: 24px;
+	}
 }
 
 .disabled-scroll {

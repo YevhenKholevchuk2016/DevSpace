@@ -1,3 +1,9 @@
+@mixin for-desktop-up-large {
+	@media (min-width: 1170px) {
+		@content;
+	}
+}
+
 @mixin for-desktop-up {
 	@media (min-width: 992px) {
 		@content;

@@ -4,8 +4,9 @@
 	&__wrapper {
 		padding-top: 16px;
 		padding-bottom: 80px;
+		max-width: 1234px;
 
-		@include for-laptop-up {
+		@include for-desktop-up {
 			padding-top: 64px;
 			padding-bottom: 72px;
 		}
@@ -17,19 +18,37 @@
 
 	&__list {
 		margin-top: 16px;
+
+		@include for-laptop-up {
+			display: flex;
+			flex-wrap: wrap;
+			margin-top: 0;
+			margin-left: -15px;
+			margin-right: -15px;
+		}
 	}
 
 	&__list-item {
 
 		& + #{$this}__list-item {
 			margin-top: 32px;
+
+			@include for-laptop-up {
+				margin-top: 16px;
+			}
+		}
+
+		@include for-laptop-up {
+			margin-top: 16px;
+			margin-bottom: 16px;
+			margin-left: 15px;
+			margin-right: 15px;
 		}
 	}
 
 	&__btn-more {
 		display: flex;
 		height: 48px;
-		max-width: 370px;
 		margin-left: auto;
 		margin-right: auto;
 		margin-top: 32px;
@@ -39,6 +58,15 @@
 			#{$this}__btn-more-icon {
 				color: #ffffff;
 			}
+		}
+
+		@include for-laptop-up {
+			height: 56px;
+			width: 100%;
+		}
+
+		@include for-desktop-up {
+			max-width: 370px;
 		}
 	}
 

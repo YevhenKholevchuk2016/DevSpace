@@ -9,9 +9,12 @@
 	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.13);
 	border-radius: 8px;
 
-	@include for-laptop-up {
+	@include for-desktop-up {
 		position: relative;
 		padding-right: 286px;
+		max-width: 970px;
+		margin-left: auto;
+		margin-right: auto;
 	}
 
 	&__button {
@@ -22,7 +25,7 @@
 		height: auto;
 		width: auto;
 
-		@include for-laptop-up {
+		@include for-desktop-up {
 			font-size: 18px;
 			position: absolute;
 			right: 0;
@@ -42,7 +45,7 @@
 	&__button-text {
 		display: none;
 
-		@include for-laptop-up {
+		@include for-desktop-up {
 			display: inline;
 			color: #ffffff;
 		}
@@ -53,7 +56,7 @@
 		height: 24px;
 		color: #a8a2a2;
 
-		@include for-laptop-up {
+		@include for-desktop-up {
 			color: #ffffff;
 			margin-right: 16px;
 		}
@@ -70,7 +73,7 @@
 			color: #999999;
 		}
 
-		@include for-laptop-up {
+		@include for-desktop-up {
 			order: 0;
 		}
 	}
