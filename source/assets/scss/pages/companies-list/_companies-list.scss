@@ -5,6 +5,7 @@
 		padding-top: 16px;
 		padding-bottom: 80px;
 		max-width: 1234px;
+		transition: padding-top .225s ease;
 
 		@include for-desktop-up {
 			padding-top: 64px;

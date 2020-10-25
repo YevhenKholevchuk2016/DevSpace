@@ -7,6 +7,12 @@
 	padding-right: 18px;
 	border-radius: 8px;
 	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.135216);
+	transition: box-shadow .225s ease,
+				flex-basis .225s ease;
+
+	&:hover {
+		box-shadow: 0 4px 11px 3px rgba(115, 136, 255, .32);
+	}
 
 	@include for-laptop-up {
 		flex: 1 1 370px;
@@ -36,6 +42,15 @@
 		line-height: 38px;
 		text-align: center;
 		margin-top: 16px;
+	}
+
+	&__company-link {
+		color: #292929;
+		cursor: pointer;
+
+		&:hover {
+			text-decoration: underline;
+		}
 	}
 
 	&__type {

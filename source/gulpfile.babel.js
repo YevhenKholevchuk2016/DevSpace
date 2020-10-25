@@ -63,10 +63,10 @@ task('html', cb => html(cb, devSource.htmlSource, devSource.htmlBase, publicSour
 
 // create svg sprite from svg files - for dev only
 task('svg-sprite', cb => spritesBuild(
-	cb,
 	devSource.svgSprite,
 	publicSource.svgSprite,
-	'symbols.svg'
+	'symbols.svg',
+	cb
 ));
 
 //create image min

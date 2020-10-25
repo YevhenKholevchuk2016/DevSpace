@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta charset="utf-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+		<script src="https://rawgit.com/jonathantneal/svg4everybody/master/dist/svg4everybody.js"></script>
+		<script>svg4everybody();</script>
+		<title>SVG &lt;symbol&gt; sprite preview | svg-sprite</title>
+		<style>@charset "UTF-8";body{padding:0;margin:0;color:#666;background:#fafafa;font-family:Arial,Helvetica,sans-serif;font-size:1em;line-height:1.4}header{display:block;padding:3em 3em 2em 3em;background-color:#fff}header p{margin:2em 0 0 0}section{border-top:1px solid #eee;padding:2em 3em 0 3em}section ul{margin:0;padding:0}section li{display:inline;display:inline-block;background-color:#fff;position:relative;margin:0 2em 2em 0;vertical-align:top;border:1px solid #ccc;padding:1em 1em 3em 1em;cursor:default}.icon-box{margin:0;width:144px;height:144px;position:relative;background:#ccc url("data:image/gif;base64,R0lGODlhDAAMAIAAAMzMzP///yH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS4wLWMwNjEgNjQuMTQwOTQ5LCAyMDEwLzEyLzA3LTEwOjU3OjAxICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1LjEgV2luZG93cyIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozQjk4OTI0MUY5NTIxMUUyQkJDMEI5NEFEM0Y1QTYwQyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozQjk4OTI0MkY5NTIxMUUyQkJDMEI5NEFEM0Y1QTYwQyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjNCOTg5MjNGRjk1MjExRTJCQkMwQjk0QUQzRjVBNjBDIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjNCOTg5MjQwRjk1MjExRTJCQkMwQjk0QUQzRjVBNjBDIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+Af/+/fz7+vn49/b19PPy8fDv7u3s6+rp6Ofm5eTj4uHg397d3Nva2djX1tXU09LR0M/OzczLysnIx8bFxMPCwcC/vr28u7q5uLe2tbSzsrGwr66trKuqqainpqWko6KhoJ+enZybmpmYl5aVlJOSkZCPjo2Mi4qJiIeGhYSDgoGAf359fHt6eXh3dnV0c3JxcG9ubWxramloZ2ZlZGNiYWBfXl1cW1pZWFdWVVRTUlFQT05NTEtKSUhHRkVEQ0JBQD8+PTw7Ojk4NzY1NDMyMTAvLi0sKyopKCcmJSQjIiEgHx4dHBsaGRgXFhUUExIREA8ODQwLCgkIBwYFBAMCAQAAIfkEAAAAAAAsAAAAAAwADAAAAhaEH6mHmmzcgzJAUG/NVGrfOZ8YLlABADs=") top left repeat;border:1px solid #ccc;display:table-cell;vertical-align:middle;text-align:center}.icon{display:inline;display:inline-block}h1{margin-top:0}h2{margin:0;padding:0;font-size:1em;font-weight:normal;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;position:absolute;left:1em;right:1em;bottom:1em}footer{display:block;margin:0;padding:0 3em 3em 3em}footer p{margin:0;font-size:.7em}footer a{color:#0f7595;margin-left:0}</style>
+		
+<!--
+	
+Sprite shape dimensions
+====================================================================================================
+You will need to set the sprite shape dimensions via CSS when you use them as inline SVG, otherwise
+they would become a huge 100% in size. You may use the following dimension classes for doing so.
+They might well be outsourced to an external stylesheet of course.
+
+-->
+
+<style type="text/css">
+	.svg-icon-dev-dims { width: 24px; height: 24px; }
+	.svg-icon-github-dims { width: 24px; height: 24px; }
+	.svg-icon-gitlab-dims { width: 24px; height: 24px; }
+	.svg-icon-instagram-dims { width: 24px; height: 24px; }
+	.svg-icon-linkedin-dims { width: 24px; height: 24px; }
+</style>
+<!--
+====================================================================================================
+-->
+
+	</head>
+	<body>
+	
+<!--
+	
+Inline <symbol> SVG sprite
+====================================================================================================
+This is an inlined version of the generated SVG sprite. The single images may be <use>d everywhere
+below within this document. Please see
+
+	https://github.com/jkphl/svg-sprite/blob/master/docs/configuration.md#defs--symbol-mode
+
+for further details on how to create this embeddable sprite variant.
+
+-->
+
+<svg width="0" height="0" style="position:absolute">
+		<symbol viewBox="0 0 24 24" id="icon-dev" xmlns="http://www.w3.org/2000/svg"><path d="M6.4 9.4c-.2-.1-.4-.2-.6-.2h-.9v5.6h.9c.2 0 .4-.1.6-.2.2-.2.3-.4.3-.7v-3.7c0-.4-.1-.6-.3-.8zM21.6 0H2.4C1.1 0 0 1 0 2.3v19.3C0 23 1.1 24 2.4 24h19.3c1.3 0 2.3-1 2.4-2.3V2.3C24 1 22.9 0 21.6 0zM8.3 13.9c0 1-.6 2.5-2.6 2.5H3.2V7.6h2.5c1.9 0 2.5 1.5 2.5 2.5l.1 3.8zm5.4-4.8h-2.9v2.1h1.7v1.6h-1.7v2.1h2.9v1.6h-3.3c-.6 0-1.1-.5-1.1-1.1V8.7c0-.6.5-1.1 1.1-1.1h3.4l-.1 1.5zm5.5 6.2c-.7 1.6-2 1.3-2.5 0l-2.1-7.8h1.7l1.6 6.1 1.6-6.1h1.7l-2 7.8z"/></symbol>
+		<symbol viewBox="0 0 24 24" id="icon-github" xmlns="http://www.w3.org/2000/svg"><path d="M23.3 0H.7C.4 0 .1.3.1.6v22.8c0 .3.3.6.6.6h7.5c.3 0 .6-.2.6-.5V21c-.6 0-1.2.1-1.8.1-1.3-.1-2.2-.6-2.7-1.8-.3-.7-.7-1.4-1.4-1.8l-.3-.3c-.1-.2-.1-.3.1-.3s.4-.1.6 0c.8.2 1.4.7 1.8 1.3.8 1.3 2.1 1.7 3.6 1.1.1 0 .2-.1.2-.2.1-.6.3-1.1.8-1.6-.5-.1-.9-.2-1.4-.3-1.3-.3-2.5-.9-3.3-1.9-.7-.9-1-1.9-1.1-3C3.6 10.6 3.8 9 5 7.7c0-.1.1-.2 0-.3-.3-1-.2-1.9 0-2.8.2-.5.3-.6.8-.5h.1c1 .2 1.9.7 2.7 1.2.1.1.3.1.4.1 2-.5 4.1-.5 6.1 0 .1 0 .3 0 .4-.1.5-.2.9-.5 1.4-.8.5-.3 1.1-.5 1.7-.5.1 0 .3.1.3.2.4 1 .5 2 .2 3 0 .1 0 .3.1.4.3.5.7 1 .9 1.6.6 1.7.4 3.5-.4 5.1-.7 1.5-2 2.3-3.6 2.7-.5.1-1.1.2-1.6.3.7.8.9 1.7.8 2.7v3.1c0 .5.2.8.6.8h8V.6c0-.3-.3-.6-.6-.6z"/></symbol>
+		<symbol viewBox="0 0 24 24" id="icon-gitlab" xmlns="http://www.w3.org/2000/svg"><path fill="#FC6D26" d="M24 13.6l-1.3-4.1L20 1.3c0-.1-.1-.2-.2-.2-.1-.1-.2-.1-.3-.1-.1 0-.2 0-.3.1l-.2.2-2.7 8.2H7.6L4.9 1.3c0-.1-.1-.2-.2-.2 0-.1-.1-.2-.2-.2s-.2.1-.3.1c-.1.1-.1.2-.2.3L1.4 9.5 0 13.6v.6c.1.2.2.3.3.5L12 23.1l11.6-8.4c.2-.1.3-.3.3-.5.1-.2.1-.4.1-.6z"/><path fill="#E24329" d="M12 23l4.4-13.6H7.6L12 23z"/><path fill="#FC6D26" d="M12 23L7.6 9.4H1.4L12 23z"/><path fill="#FCA326" d="M1.4 9.5L0 13.6v.6c.1.2.2.3.3.5L12 23.1 1.4 9.5z"/><path fill="#E24329" d="M1.4 9.5h6.2L4.9 1.3c0-.1-.1-.2-.2-.2 0-.1-.1-.2-.2-.2s-.2.1-.3.1c-.1.1-.1.2-.2.3L1.4 9.5z"/><path fill="#FC6D26" d="M12 23l4.4-13.6h6.2L12 23z"/><path fill="#FCA326" d="M22.6 9.5l1.3 4.1c.1.2.1.4 0 .6-.1.2-.2.3-.3.5L12 23 22.6 9.5z"/><path fill="#E24329" d="M22.6 9.5h-6.2l2.7-8.2c0-.1.1-.2.2-.2.1-.1.2-.1.3-.1.1 0 .2 0 .3.1l.2.2 2.5 8.2z"/></symbol>
+		<symbol viewBox="0 0 24 24" id="icon-instagram" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 1.2.1 1.8.2 2.2.4.5.2 1 .5 1.4.9.4.4.7.9.9 1.4.2.4.4 1.1.4 2.2.1 1.3.1 1.6.1 4.8 0 3.2 0 3.6-.1 4.8-.1 1.2-.2 1.8-.4 2.2-.2.5-.5 1-.9 1.4-.4.4-.9.7-1.4.9-.4.2-1.1.4-2.2.4-1.3.1-1.6.1-4.8.1-3.2 0-3.6 0-4.8-.1-1.2-.1-1.8-.2-2.2-.4-.5-.2-1-.5-1.4-.9-.4-.4-.7-.9-.9-1.4-.2-.4-.4-1.1-.4-2.2-.1-1.3-.1-1.6-.1-4.8 0-3.2 0-3.6.1-4.8 0-1.2.2-1.9.3-2.3.2-.5.5-1 .9-1.4.4-.4.9-.7 1.4-.9.4-.1 1.1-.3 2.3-.4H12zM12 0C8.7 0 8.3 0 7.1.1c-1.3 0-2.2.2-3 .5C3.3.9 2.6 1.4 2 2 1.4 2.6.9 3.3.6 4.1c-.3.8-.5 1.7-.5 3C0 8.3 0 8.7 0 12c0 3.3 0 3.7.1 4.9.1 1.3.3 2.1.6 2.9.2.9.7 1.6 1.3 2.2.6.6 1.3 1.1 2.1 1.4.8.3 1.6.5 2.9.6h5c3.3 0 3.7 0 4.9-.1 1.3-.1 2.1-.3 2.9-.6.8-.3 1.5-.8 2.1-1.4.6-.6 1.1-1.3 1.4-2.1.3-.8.5-1.6.6-2.9.1-1.2.1-1.6.1-4.9 0-3.3 0-3.7-.1-4.9-.1-1.3-.3-2.1-.6-2.9-.2-.9-.7-1.6-1.3-2.2-.6-.6-1.3-1.1-2.1-1.4C19.1.3 18.3.1 17 0h-5z"/><path d="M12 5.8c-1.2 0-2.4.4-3.4 1S6.8 8.5 6.3 9.6c-.5 1.2-.6 2.4-.3 3.6.2 1.2.8 2.3 1.7 3.2.9.9 2 1.4 3.2 1.7 1.2.2 2.4.1 3.6-.4 1.1-.5 2.1-1.3 2.8-2.3.7-1 1-2.2 1-3.4 0-1.6-.6-3.2-1.8-4.4-1.3-1.1-2.9-1.8-4.5-1.8zM12 16c-.8 0-1.6-.2-2.2-.7-.7-.4-1.2-1.1-1.5-1.8-.3-.7-.4-1.5-.2-2.3.2-.8.5-1.5 1.1-2 .6-.6 1.3-.9 2-1.1.8-.2 1.6-.1 2.3.2.7.3 1.4.8 1.8 1.5.4.7.7 1.4.7 2.2 0 1.1-.4 2.1-1.2 2.8-.7.8-1.7 1.2-2.8 1.2zM18.4 7c.8 0 1.4-.6 1.4-1.4s-.6-1.4-1.4-1.4c-.8 0-1.4.6-1.4 1.4S17.6 7 18.4 7z"/></symbol>
+		<symbol viewBox="0 0 24 24" id="icon-linkedin" xmlns="http://www.w3.org/2000/svg"><defs><path id="ea" d="M0 0h24v24H0z"/></defs><clipPath id="eb"><use xlink:href="#ea" overflow="visible"/></clipPath><g clip-path="url(#eb)"><path fill="#0077B7" d="M21.8 0H2.2C1 0 0 1 0 2.2v19.7C0 23 1 24 2.2 24h19.7c1.2 0 2.2-1 2.2-2.2V2.2C24 1 23 0 21.8 0zM7.4 20.7c0 .3-.3.6-.6.6H4.1c-.3 0-.6-.3-.6-.6V9.4c0-.3.3-.6.6-.6h2.7c.3 0 .6.3.6.6v11.3zM5.5 7.8C4 7.8 2.9 6.6 2.9 5.2c0-1.4 1.1-2.6 2.6-2.6S8 3.8 8 5.2c0 1.4-1.1 2.6-2.5 2.6zm16 13c0 .3-.3.6-.6.6H18c-.3 0-.6-.3-.6-.6v-5.3c0-.8.2-3.5-2.1-3.5-1.8 0-2.1 1.8-2.2 2.6v6.1c0 .3-.3.6-.6.6H9.8c-.3 0-.6-.3-.6-.6V9.4c0-.3.3-.6.6-.6h2.8c.3 0 .6.3.6.6v1c.7-1 1.6-1.8 3.7-1.8 4.6 0 4.6 4.3 4.6 6.7v5.5z"/></g></symbol>
+</svg>
+
+<!--
+====================================================================================================
+-->
+		
+		<header>
+			<h1>SVG <code>&lt;symbol&gt;</code> sprite preview</h1>
+			<p>This preview features two methods of using the generated sprite in conjunction with inline SVG. Please have a look at the HTML source for further details and be aware of the following constraints:</p>
+			<ul>
+				<li>Your browser has to <a href="http://caniuse.com/#feat=svg-html5" target="_blank">support inline SVG</a> for these techniques to work.</li>
+				<li>The embedded sprite (A) slightly differs from the generated external one. Please <a href="https://github.com/jkphl/svg-sprite/blob/master/docs/configuration.md#defs--symbol-mode" target="_blank">see the documentation</a> for details on how to create such an embeddable sprite.</li>
+				<li>Internet Explorer up to version 11 doesn't support external sprites for use with inline SVG. For IE 9-11, you may polyfill this functionality with <a href="https://github.com/jonathantneal/svg4everybody" target="_blank">SVG for Everybody</a>.</li>
+			</ul>
+		</header>
+		<section>
+
+<!--
+	
+A) Inline SVG with embedded sprite
+====================================================================================================
+These SVG images make use of fragment identifiers (IDs) and are extracted out of the inline sprite
+embedded above. They may be styled via CSS.
+
+-->
+
+			<h3>A) Inline SVG with embedded sprite</h3>
+			<ul>
+
+				<li title="icon-dev">
+					<div class="icon-box">
+						
+						<!-- icon-dev -->
+						<svg class="svg-icon-dev-dims">
+							<use xlink:href="#icon-dev"></use>
+						</svg>
+						
+					</div>
+					<h2>icon-dev</h2>
+				</li>
+				<li title="icon-github">
+					<div class="icon-box">
+						
+						<!-- icon-github -->
+						<svg class="svg-icon-github-dims">
+							<use xlink:href="#icon-github"></use>
+						</svg>
+						
+					</div>
+					<h2>icon-github</h2>
+				</li>
+				<li title="icon-gitlab">
+					<div class="icon-box">
+						
+						<!-- icon-gitlab -->
+						<svg class="svg-icon-gitlab-dims">
+							<use xlink:href="#icon-gitlab"></use>
+						</svg>
+						
+					</div>
+					<h2>icon-gitlab</h2>
+				</li>
+				<li title="icon-instagram">
+					<div class="icon-box">
+						
+						<!-- icon-instagram -->
+						<svg class="svg-icon-instagram-dims">
+							<use xlink:href="#icon-instagram"></use>
+						</svg>
+						
+					</div>
+					<h2>icon-instagram</h2>
+				</li>
+				<li title="icon-linkedin">
+					<div class="icon-box">
+						
+						<!-- icon-linkedin -->
+						<svg class="svg-icon-linkedin-dims">
+							<use xlink:href="#icon-linkedin"></use>
+						</svg>
+						
+					</div>
+					<h2>icon-linkedin</h2>
+				</li>
+			</ul>
+
+<!--
+====================================================================================================
+-->
+
+		</section>
+		<section>
+
+<!--
+	
+B) Inline SVG with external sprite (IE 9-11 with polyfill only)
+====================================================================================================
+These SVG images make use of an URL + fragment identifiers (IDs) and refer to the regular external
+SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
+
+-->
+
+			<h3>B) Inline SVG with external sprite (IE 9-11 with polyfill only)</h3>
+			<ul>
+				
+				<li title="icon-dev">
+					<div class="icon-box">
+						
+						<!-- icon-dev -->
+						<svg class="svg-icon-dev-dims">
+							<use xlink:href="symbols.svg#icon-dev"></use>
+						</svg>
+						
+					</div>
+					<h2>icon-dev</h2>
+				</li>
+				<li title="icon-github">
+					<div class="icon-box">
+						
+						<!-- icon-github -->
+						<svg class="svg-icon-github-dims">
+							<use xlink:href="symbols.svg#icon-github"></use>
+						</svg>
+						
+					</div>
+					<h2>icon-github</h2>
+				</li>
+				<li title="icon-gitlab">
+					<div class="icon-box">
+						
+						<!-- icon-gitlab -->
+						<svg class="svg-icon-gitlab-dims">
+							<use xlink:href="symbols.svg#icon-gitlab"></use>
+						</svg>
+						
+					</div>
+					<h2>icon-gitlab</h2>
+				</li>
+				<li title="icon-instagram">
+					<div class="icon-box">
+						
+						<!-- icon-instagram -->
+						<svg class="svg-icon-instagram-dims">
+							<use xlink:href="symbols.svg#icon-instagram"></use>
+						</svg>
+						
+					</div>
+					<h2>icon-instagram</h2>
+				</li>
+				<li title="icon-linkedin">
+					<div class="icon-box">
+						
+						<!-- icon-linkedin -->
+						<svg class="svg-icon-linkedin-dims">
+							<use xlink:href="symbols.svg#icon-linkedin"></use>
+						</svg>
+						
+					</div>
+					<h2>icon-linkedin</h2>
+				</li>
+			</ul>
+
+<!--
+====================================================================================================
+-->
+
+		</section>
+		<footer>
+			<p>Generated at Sun, 25 Oct 2020 20:36:17 GMT by <a href="https://github.com/jkphl/svg-sprite" target="_blank">svg-sprite</a>.</p>
+		</footer>
+	</body>
+</html>

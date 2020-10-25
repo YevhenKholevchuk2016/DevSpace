@@ -10,7 +10,7 @@ export const publicSource = {
 	pathOutputCss : 'assets/html/base/partials/front/css/',
 	pathOutputJs  : 'assets/html/base/partials/front/js/',
 	images        : '../public/assets/images/',
-	svgSprite     : '../public/assets/images/sprites/icons/'
+	svgSprite     : '../public/assets/images/sprites/'
 };
 
 export const devSource = {
@@ -25,7 +25,7 @@ export const devSource = {
 	excludeSprites     : '!assets/images/sprites/**/*',
 	excludeFavicon     : '!assets/images/favicon/**/*',
 	favicon            : 'assets/images/favicon/favicon.svg',
-	svgSprite          : 'assets/images/sprites/icons/svg/*.svg',
+	svgSprite          : 'assets/images/sprites/',
 	browserSyncBaseDir : '../public/',
 	browserSyncIndex   : 'companies-list.html',
 };

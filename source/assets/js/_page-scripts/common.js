@@ -2,8 +2,8 @@
 
 /*---=== import modules ===---*/
 
-import lazyLoading from './../components/lazyLoading';
 import {qS, qSA} from "../components/functions/querySelector";
+import lazyLoading from './../components/lazyLoading';
 import hamburger from "../components/hamburger";
 
 /*---=== /import modules ===---*/

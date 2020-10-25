@@ -160,8 +160,8 @@ a:hover {
 	text-decoration: none;
 }
 
-a[href="javascript:void();"],
-a[href="javascript:"] {
+[href="javascript:void();"],
+[href="javascript:"] {
 	cursor: default;
 }
 

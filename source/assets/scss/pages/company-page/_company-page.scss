@@ -1,3 +1,32 @@
-p {
-	color: red;
+.company {
+
+	&__wrapper {
+		padding-top: 24px;
+		padding-bottom: 80px;
+
+		@include for-desktop-up {
+			padding-top: 32px;
+			padding-bottom: 104px;
+		}
+	}
+
+	&__overlay {
+
+		@include for-laptop-up {
+			display: flex;
+			flex-wrap: wrap;
+		}
+	}
+
+	&__about {
+
+		@include for-laptop-up {
+			flex-grow: 0;
+			flex-basis: 345px;
+		}
+
+		@include for-desktop-up {
+			flex-basis: 370px;
+		}
+	}
 }
