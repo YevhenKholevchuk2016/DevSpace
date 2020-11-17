@@ -10,6 +10,7 @@ import aboutToggle from '../pages/company/about-toggle';
 /*---=== declare variables ===---*/
 
 const companyAbout = qS('.js-company-about');
+const truncatedText = '.js-truncated-text';
 
 /*---=== /declare variables ===---*/
 
@@ -18,7 +19,7 @@ const companyAbout = qS('.js-company-about');
 document.addEventListener("DOMContentLoaded", () => {
 
 	if(companyAbout != null) {
-		aboutToggle(companyAbout);
+		aboutToggle(truncatedText);
 	}
 
 });

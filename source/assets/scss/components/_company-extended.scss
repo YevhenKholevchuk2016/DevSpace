@@ -15,28 +15,18 @@
 		}
 	}
 
-	&__about-overlay {
-		text-align: right;
-		margin-top: 16px;
-	}
-
 	&__text {
-		text-align: left;
 		line-height: 24px;
 		color: #606060;
+		margin-top: 16px;
 
-		p ~ p {
-			padding-top: 30px;
+		p {
+			display: inline;
 		}
-	}
-
-	.trim-text {
-		@include trim(9);
 	}
 
 	&__button {
 		font-size: 16px;
-		line-height: 32px;
 		color: #888888;
 	}
 
@@ -45,17 +35,33 @@
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: flex-start;
-		margin-left: -8px;
-		margin-right: -8px;
-		margin-top: 8px;
+		margin-left: -7px;
+		margin-right: -7px;
+		margin-top: 7px;
+
+		@include for-laptop-up {
+			margin-left: -8px;
+			margin-right: -8px;
+			margin-top: 8px;
+		}
+
 	}
 
 	&__internet-item {
-		margin-left: 8px;
-		margin-right: 8px;
+		margin-left: 7px;
+		margin-right: 7px;
 
-		&:nth-child(6) ~ #{$this}__internet-item {
-			margin-top: 8px;
+		@include for-laptop-up {
+			margin-left: 8px;
+			margin-right: 8px;
+		}
+
+		&:nth-child(7) ~ #{$this}__internet-item {
+			margin-top: 7px;
+
+			@include for-laptop-up {
+				margin-top: 8px;
+			}
 		}
  	}
 
@@ -67,5 +73,9 @@
 		width: 24px;
 		height: 24px;
 		color: #000000;
+
+		&--facebook {
+			color: #3B5998;
+		}
 	}
 }

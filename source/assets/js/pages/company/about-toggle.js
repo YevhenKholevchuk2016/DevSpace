@@ -1,10 +1,12 @@
-export default button => {
-	button.addEventListener('click', event => {
-		event.target.previousElementSibling.classList.toggle('trim-text');
-		if(event.target.previousElementSibling.classList.contains('trim-text') !== true) {
-			event.target.innerText = event.target.dataset.textHide;
-		} else {
-			event.target.innerText = event.target.dataset.textShow;
-		}
+import Cuttr from 'Cuttr';
+export default truncatedText => {
+	new Cuttr(truncatedText, {
+		truncate: 'characters',
+		length: 273,
+		readMore: true,
+		readMoreText: window.devSpaceSettings.textMore,
+		readLessText: window.devSpaceSettings.textLess,
+		readMoreBtnPosition: 'inside',
+		readMoreBtnSelectorClass: 'company-extended__button'
 	});
 }
