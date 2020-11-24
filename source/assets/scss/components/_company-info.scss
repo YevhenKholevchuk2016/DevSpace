@@ -1,0 +1,31 @@
+.company-info {
+	$this: &;
+	margin-top: 32px;
+
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		padding: 24px 16px;
+	}
+
+	&__header-logo {
+		width: 90px;
+		height: 24px;
+	}
+
+	&__header-image {
+		display: block;
+		max-height: 24px;
+		width: auto;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	&__header-headline {
+		font-size: 16px;
+		font-weight: 700;
+		color: #606060;
+		margin-right: auto;
+		margin-left: 8px;
+	}
+}
