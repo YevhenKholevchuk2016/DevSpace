@@ -1,40 +1,40 @@
 export default arrImages => {
-	const removeDataImageSources = target => ['data-src','data-srcset'].forEach(elem => target.removeAttribute(elem));
+	const removeDataImageSources = target => ['data-src', 'data-srcset'].map(elem => target.removeAttribute(elem));
+
+	const setSrcData = image => {
+		if(image.parentElement.nodeName === 'PICTURE') {
+			const imageParents = Array.from(image.parentElement.querySelectorAll('source'));
+			imageParents.map(source => {
+				source.setAttribute('srcset', source.dataset.srcset);
+				removeDataImageSources(source);
+			});
+		}
+	}
+
+	const setDataImage = img => {
+		if (img.tagName === 'IMG') {
+			img.setAttribute('src', img.dataset.src);
+			setSrcData(img);
+		} else if(img.tagName !== 'SOURCE') {
+			img.style.setProperty('background-image', `url(${img.dataset.src})`);
+		}
+		if (img.hasAttribute('srcset')) {
+			img.setAttribute('srcset', img.dataset.srcset);
+		}
+		removeDataImageSources(img);
+	}
 
 	if ("IntersectionObserver" in window) {
 		let lazyImageObserver = new IntersectionObserver(entries => {
-			entries.forEach(entry => {
+			entries.map(entry => {
 				if (entry.isIntersecting) {
-					let Image = entry.target;
-					if (Image.tagName === 'IMG') {
-						Image.src = Image.getAttribute('data-src');
-						if(Image.hasAttribute('srcset')) {
-							Image.srcset = Image.getAttribute('data-srcset');
-						}
-					} else {
-						Image.style.setProperty('background-image', `url(${Image.getAttribute('data-src')})`);
-					}
-					removeDataImageSources(Image);
-					lazyImageObserver.unobserve(Image);
+					setDataImage(entry.target);
+					lazyImageObserver.unobserve(entry.target);
 				}
-
 			});
-
-		});
-		arrImages.forEach(Image => {
-			lazyImageObserver.observe(Image);
-		});
+		}, {rootMargin: '0px 0px 20px 0px'});
+		arrImages.map(img => lazyImageObserver.observe(img));
 	} else {
-		arrImages.forEach(Image => {
-			if (Image.tagName === 'IMG') {
-				Image.setAttribute('src', Image.getAttribute('data-src'));
-				if(Image.hasAttribute('srcset')) {
-					Image.setAttribute('srcset', Image.getAttribute('data-srcset'))
-				}
-			} else {
-				Image.style.setProperty('background-image', `url(${Image.getAttribute('data-src')})`);
-			}
-			removeDataImageSources(Image);
-		});
+		arrImages.map(setDataImage);
 	}
 }

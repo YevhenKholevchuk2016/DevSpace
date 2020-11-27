@@ -2,7 +2,7 @@
 
 /*---=== import modules ===---*/
 
-import {qS, qSA} from "../components/functions/querySelector";
+import {qS, qSA} from "../functions/querySelector";
 import lazyLoading from './../components/lazyLoading';
 import hamburger from "../components/hamburger";
 
@@ -10,7 +10,7 @@ import hamburger from "../components/hamburger";
 
 /*---=== declare variables ===---*/
 
-const arrImages = qSA(".b-lazy");
+const arrImages = qSA(".js-lazy");
 const header = qS('.main-header');
 
 /*---=== /declare variables ===---*/
@@ -20,7 +20,7 @@ const header = qS('.main-header');
 document.addEventListener("DOMContentLoaded", () => {
 
 	// call lazy loading module
-	if (arrImages !== null) {
+	if (arrImages.length > 0) {
 		lazyLoading(arrImages);
 	}
 

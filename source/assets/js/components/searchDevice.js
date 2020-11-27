@@ -1,4 +1,4 @@
-import request from './../components/functions/request';
+import request from '../functions/request';
 import Fuse from 'fuse.js';
 
 export default class searchDevice {

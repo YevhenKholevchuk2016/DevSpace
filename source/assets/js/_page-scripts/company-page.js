@@ -2,7 +2,7 @@
 
 /*---=== import modules ===---*/
 
-import {qS} from "../components/functions/querySelector";
+import {qS} from "../functions/querySelector";
 import aboutToggle from '../pages/company/about-toggle';
 
 /*---=== /import modules ===---*/

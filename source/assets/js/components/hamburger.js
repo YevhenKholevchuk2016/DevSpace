@@ -1,5 +1,5 @@
 // define functions for show/hide mobile menu
-import {qS} from "./functions/querySelector";
+import {qS} from "../functions/querySelector";
 
 export default () => {
 	const hamburger = qS('.js-hamburger');
