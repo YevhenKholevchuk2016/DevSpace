@@ -22,7 +22,8 @@ Static pages for https://devspace.com.ua/ project
 |  3   | 16.11.2020   | 17.11.2020  | 22:00  | 02:00  | 4h    |
 |  4   | 24.11.2020   | 25.11.2020  | 23:00  | 02:00  | 3h    |
 |  5   | 26.11.2020   | 27.11.2020  | 02:00  | 03:00  | 1h    |
-| SUM  |              |             |        |        | 15h   |
+|  6   | 29.11.2020   | 29.11.2020  | 02:00  | 03:00  | 1h    |
+| SUM  |              |             |        |        | 16h   |
 
 https://webdevmaster2016.github.io/DevSpace/public/companies-list.html
 
