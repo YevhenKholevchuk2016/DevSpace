@@ -21,6 +21,7 @@
 	&__header-image {
 		display: block;
 		max-height: 24px;
+		max-width: 90px;
 		width: auto;
 	}
 
@@ -47,5 +48,33 @@
 		width: 12px;
 		height: 12px;
 		color: #828282;
+	}
+
+	&__content {
+		padding-top: 16px;
+		padding-left: 16px;
+		padding-right: 16px;
+		padding-bottom: 25px;
+		border-top: 1px solid #D8D8D8;
+	}
+
+	&__group {
+		display: flex;
+
+		& + #{$this}__group {
+			margin-top: 160x;
+		}
+	}
+
+	&__group-icon {
+		width: 20px;
+		height: 20px;
+		flex-shrink: 0;
+		margin-right: 12px;
+	}
+
+	&__group-links {
+		//overflow-wrap: break-word;
+		word-wrap: break-word;
 	}
 }

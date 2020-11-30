@@ -1,0 +1,17 @@
+.progress {
+	height: 8px;
+
+	&__canvas {
+		height: inherit;
+		position: relative;
+		background-color: #dadada;
+	}
+
+	&__fill {
+		position: absolute;
+		left: 0;
+		top: 0;
+		height: 100%;
+		background-color: #7388FF;
+	}
+}
