@@ -60,21 +60,37 @@
 
 	&__group {
 		display: flex;
+		align-items: center;
 
 		& + #{$this}__group {
-			margin-top: 160x;
+			margin-top: 16px;
 		}
 	}
 
 	&__group-icon {
+		align-self: flex-start;
 		width: 20px;
 		height: 20px;
 		flex-shrink: 0;
 		margin-right: 12px;
+		color: #a8a2a2;
+
+		&--rating {
+			color: #f6ae21;
+		}
 	}
 
-	&__group-links {
-		//overflow-wrap: break-word;
-		word-wrap: break-word;
+	&__group-data {
+		display: flex;
+		width: 100%;
+	}
+
+	&__group-link {
+		word-break: break-word;
+		color: #7388ff;
+
+		&:hover {
+			text-decoration: underline;
+		}
 	}
 }
