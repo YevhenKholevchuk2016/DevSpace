@@ -81,8 +81,32 @@
 	}
 
 	&__group-data {
+		color: #606060;
 		display: flex;
 		width: 100%;
+
+		&--person {
+			flex-direction: column;
+			line-height: 22px;
+		}
+
+		&--questionnaire {
+			margin-top: 10px;
+		}
+	}
+
+	&__group-amount {
+		margin-right: 5px;
+	}
+
+	&__group-data-link {
+		font-weight: 700;
+		color: #7388ff;
+		margin-left: auto;
+	}
+
+	&__group-progress {
+		margin-top: 8px;
 	}
 
 	&__group-link {
