@@ -4,6 +4,7 @@
 
 import {qS} from "../functions/querySelector";
 import aboutToggle from '../pages/company/about-toggle';
+import slider from  '../pages/company/slider';
 
 /*---=== /import modules ===---*/
 
@@ -11,6 +12,7 @@ import aboutToggle from '../pages/company/about-toggle';
 
 const companyAbout = qS('.js-company-about');
 const truncatedText = '.js-truncated-text';
+const gallery = qS('.js-gallery');
 
 /*---=== /declare variables ===---*/
 
@@ -20,6 +22,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	if(companyAbout != null) {
 		aboutToggle(truncatedText);
+	}
+
+	if(gallery !== null) {
+		slider();
 	}
 
 });

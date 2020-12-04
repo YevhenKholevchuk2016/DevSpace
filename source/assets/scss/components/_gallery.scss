@@ -1,0 +1,28 @@
+.gallery {
+	$_this: &;
+
+	display: flex;
+	align-content: center;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+	&__item {
+		width: 48px;
+		height: 48px;
+
+		&--large {
+			width: 100%;
+			height: auto;
+			margin-top: 16px;
+
+			#{$_this}__image {
+				width: 100%;
+				height: auto;
+			}
+		}
+	}
+
+	&__image {
+		display: block;
+	}
+}

@@ -68,6 +68,7 @@
 	"dependencies": {
 		"axios": "0.20.0",
 		"cuttr": "^1.2.0",
-		"fuse.js": "3.6.1"
+		"fuse.js": "3.6.1",
+		"glightbox": "^3.0.6"
 	}
 }
