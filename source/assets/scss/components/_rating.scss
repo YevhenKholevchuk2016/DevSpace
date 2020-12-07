@@ -1,0 +1,19 @@
+.rating {
+	$_this: &;
+
+	display: flex;
+
+	&__icon {
+		width: 18px;
+		height: 18px;
+		color: #f6ae21;
+
+		& + #{$_this}__icon {
+			margin-left: 10px;
+		}
+
+		&--empty {
+			color: #a8a2a2;
+		}
+	}
+}

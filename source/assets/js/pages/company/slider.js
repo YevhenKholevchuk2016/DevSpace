@@ -1,26 +1,21 @@
 import GLightbox from 'glightbox';
-export default () => {
-	// const leftBtn = demoSection.querySelector('.demo-section__slider-prev');
-	// const rightBtn = demoSection.querySelector('.demo-section__slider-next');
+import getParents from "../../functions/getParents";
+export default galleryOpenArr => {
+
 	const gallery = GLightbox({
 		keyboardNavigation: true,
 		touchNavigation: true,
 		loop: true
 	});
 
-	/*leftBtn.addEventListener('click', () => {
-		if (window.innerWidth > 992) {
-			desktopGallery.open();
-		} else {
-			mobileGallery.open();
-		}
+	galleryOpenArr.forEach(element => {
+		element.addEventListener('click', event => {
+			const [parents] = getParents(event.target, '.company-info__content', true);
+			if(parents && parents.querySelector('.glightbox') !== null) {
+				parents.querySelector('.glightbox').click();
+			} else {
+				console.warn('There is no photo inside of - ', parents);
+			}
+		});
 	});
-
-	rightBtn.addEventListener('click', () => {
-		if (window.innerWidth > 992) {
-			desktopGallery.open();
-		} else {
-			mobileGallery.open();
-		}
-	});*/
 }

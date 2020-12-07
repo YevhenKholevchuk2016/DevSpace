@@ -100,8 +100,8 @@
 			<!-- /Company preview -->
 
 			<!-- Company info - dou -->
-			<section class="company-info box">
-				<header class="company-info__header">
+			<section class="company-info box js-company-info">
+				<header class="company-info__header js-company-info-header">
 					<figure class="company-info__header-logo">
 						<img class="company-info__header-image js-lazy"
 						     data-src="assets/images/logos/dou-logo.svg"
@@ -120,7 +120,7 @@
 						</svg>
 					</button>
 				</header>
-				<div class="company-info__content">
+				<div class="company-info__content js-company-info-content">
 					<div class="company-info__group">
 						<svg class="custom-icon company-info__group-icon company-info__group-icon--rating">
 							<use xlink:href="assets/images/sprites/company/svg/symbols.svg#icon-rating"></use>
@@ -189,13 +189,13 @@
 						</svg>
 						<div class="company-info__group-data">
 							<b class="company-info__group-amount">24</b> Фотографії
-							<a class="company-info__group-data-link" href="javascript:">Відкрити усі</a>
+							<a class="company-info__group-data-link js-open-gallery" href="javascript:">Відкрити усі</a>
 						</div>
 					</div>
 					<div class="company-info__group gallery js-gallery">
 						<a href="assets/images/company/levi9/large/1.jpg"
 						   class="gallery__item glightbox"
-						   data-gallery="gallery"
+						   data-gallery="gallery1"
 						>
 							<img class="gallery__image"
 							     src="assets/images/company/levi9/small/1.jpg"
@@ -204,7 +204,7 @@
 						</a>
 						<a href="assets/images/company/levi9/large/2.jpg"
 						   class="gallery__item glightbox"
-						   data-gallery="gallery"
+						   data-gallery="gallery1"
 						>
 							<img class="gallery__image"
 							     src="assets/images/company/levi9/small/2.jpg"
@@ -213,7 +213,7 @@
 						</a>
 						<a href="assets/images/company/levi9/large/3.jpg"
 						   class="gallery__item glightbox"
-						   data-gallery="gallery"
+						   data-gallery="gallery1"
 						>
 							<img class="gallery__image"
 							     src="assets/images/company/levi9/small/3.jpg"
@@ -222,7 +222,7 @@
 						</a>
 						<a href="assets/images/company/levi9/large/4.jpg"
 						   class="gallery__item glightbox"
-						   data-gallery="gallery"
+						   data-gallery="gallery1"
 						>
 							<img class="gallery__image"
 							     src="assets/images/company/levi9/small/4.jpg"
@@ -231,7 +231,7 @@
 						</a>
 						<a href="assets/images/company/levi9/large/5.jpg"
 						   class="gallery__item glightbox"
-						   data-gallery="gallery"
+						   data-gallery="gallery1"
 						>
 							<img class="gallery__image"
 							     src="assets/images/company/levi9/small/5.jpg"
@@ -240,7 +240,7 @@
 						</a>
 						<a href="assets/images/company/levi9/large/6.jpg"
 						   class="gallery__item gallery__item--large glightbox"
-						   data-gallery="gallery"
+						   data-gallery="gallery1"
 						>
 							<img class="gallery__image"
 							     src="assets/images/company/levi9/large/6.jpg"
@@ -250,12 +250,12 @@
 						<a hidden
 						   href="assets/images/company/levi9/large/7.jpg"
 						   class="glightbox"
-						   data-gallery="gallery"
+						   data-gallery="gallery1"
 						></a>
 						<a hidden
 						   href="assets/images/company/levi9/large/8.jpg"
 						   class="glightbox"
-						   data-gallery="gallery"
+						   data-gallery="gallery1"
 						></a>
 					</div>
 				</div>
@@ -263,8 +263,8 @@
 			<!-- /Company info - dou -->
 
 			<!-- Company info - glassdoor -->
-			<section class="company-info box">
-				<header class="company-info__header">
+			<section class="company-info box js-company-info">
+				<header class="company-info__header js-company-info-header">
 					<figure class="company-info__header-logo">
 						<img class="company-info__header-image js-lazy"
 						     data-src="assets/images/logos/glassdoor-logo.svg"
@@ -283,13 +283,34 @@
 						</svg>
 					</button>
 				</header>
-				<div class="company-info__content">
+				<div class="company-info__content js-company-info-content">
+					<div class="company-info__group company-info__group--votes">
+						<b class="company-info__votes-score">4.5</b>
+						<div class="rating company-info__rating">
+							<svg class="custom-icon rating__icon">
+								<use xlink:href="assets/images/sprites/company/svg/symbols.svg#icon-star"></use>
+							</svg>
+							<svg class="custom-icon rating__icon">
+								<use xlink:href="assets/images/sprites/company/svg/symbols.svg#icon-star"></use>
+							</svg>
+							<svg class="custom-icon rating__icon">
+								<use xlink:href="assets/images/sprites/company/svg/symbols.svg#icon-star"></use>
+							</svg>
+							<svg class="custom-icon rating__icon">
+								<use xlink:href="assets/images/sprites/company/svg/symbols.svg#icon-star"></use>
+							</svg>
+							<svg class="custom-icon rating__icon">
+								<use xlink:href="assets/images/sprites/company/svg/symbols.svg#icon-star-half"></use>
+							</svg>
+						</div>
+						<p class="company-info__votes-amount">(22 голоси)</p>
+					</div>
 					<div class="company-info__group">
 						<svg class="custom-icon company-info__group-icon">
 							<use xlink:href="assets/images/sprites/company/svg/symbols.svg#icon-vacancies"></use>
 						</svg>
 						<div class="company-info__group-data">
-							<b class="company-info__group-amount">16</b> Вакансій
+							<b class="company-info__group-amount">21</b> Вакансій
 							<a class="company-info__group-data-link" href="javascript:">Переглянути</a>
 						</div>
 					</div>
@@ -298,7 +319,7 @@
 							<use xlink:href="assets/images/sprites/company/svg/symbols.svg#icon-reviews"></use>
 						</svg>
 						<div class="company-info__group-data">
-							<b class="company-info__group-amount">22</b> Відгуки
+							<b class="company-info__group-amount">81</b> Відгуки
 							<a class="company-info__group-data-link" href="javascript:">Прочитати</a>
 						</div>
 					</div>
@@ -308,7 +329,7 @@
 						</svg>
 						<div class="company-info__group-data">
 							<b class="company-info__group-amount">24</b> Фотографії
-							<a class="company-info__group-data-link" href="javascript:">Відкрити усі</a>
+							<a class="company-info__group-data-link js-open-gallery" href="javascript:">Відкрити усі</a>
 						</div>
 					</div>
 					<div class="company-info__group">
@@ -321,13 +342,49 @@
 							>https://www.glassdoor.com/Overview/Working-at-Levi9-EI_IE397936.11,16.htm</a>
 						</div>
 					</div>
+					<div hidden
+					     class="js-gallery"
+					>
+						<a href="assets/images/company/levi9/large/7.jpg"
+						   class="glightbox"
+						   data-gallery="gallery2"
+						></a>
+						<a href="assets/images/company/levi9/large/8.jpg"
+						   class="glightbox"
+						   data-gallery="gallery2"
+						></a>
+						<a href="assets/images/company/levi9/large/3.jpg"
+						   class="glightbox"
+						   data-gallery="gallery2"
+						></a>
+						<a href="assets/images/company/levi9/large/4.jpg"
+						   class="glightbox"
+						   data-gallery="gallery2"
+						></a>
+						<a href="assets/images/company/levi9/large/5.jpg"
+						   class="glightbox"
+						   data-gallery="gallery2"
+						></a>
+						<a href="assets/images/company/levi9/large/6.jpg"
+						   class="glightbox"
+						   data-gallery="gallery2"
+						></a>
+						<a href="assets/images/company/levi9/large/1.jpg"
+						   class="glightbox"
+						   data-gallery="gallery2"
+						></a>
+						<a href="assets/images/company/levi9/large/2.jpg"
+						   class="glightbox"
+						   data-gallery="gallery2"
+						></a>
+					</div>
 				</div>
 			</section>
 			<!-- /Company info - glassdoor -->
 
 			<!-- Company info - indeed -->
-			<section class="company-info box">
-				<header class="company-info__header">
+			<section class="company-info box js-company-info">
+				<header class="company-info__header js-company-info-header">
 					<figure class="company-info__header-logo">
 						<img class="company-info__header-image js-lazy"
 						     data-src="assets/images/logos/indeed-logo.svg"
@@ -346,12 +403,72 @@
 						</svg>
 					</button>
 				</header>
+				<div class="company-info__content js-company-info-content">
+					<div class="company-info__group company-info__group--votes">
+						<b class="company-info__votes-score">4</b>
+						<div class="rating company-info__rating">
+							<svg class="custom-icon rating__icon">
+								<use xlink:href="assets/images/sprites/company/svg/symbols.svg#icon-star"></use>
+							</svg>
+							<svg class="custom-icon rating__icon">
+								<use xlink:href="assets/images/sprites/company/svg/symbols.svg#icon-star"></use>
+							</svg>
+							<svg class="custom-icon rating__icon">
+								<use xlink:href="assets/images/sprites/company/svg/symbols.svg#icon-star"></use>
+							</svg>
+							<svg class="custom-icon rating__icon">
+								<use xlink:href="assets/images/sprites/company/svg/symbols.svg#icon-star"></use>
+							</svg>
+							<svg class="custom-icon rating__icon rating__icon--empty">
+								<use xlink:href="assets/images/sprites/company/svg/symbols.svg#icon-star-empty"></use>
+							</svg>
+						</div>
+						<p class="company-info__votes-amount">(22 голоси)</p>
+					</div>
+					<div class="company-info__group">
+						<svg class="custom-icon company-info__group-icon">
+							<use xlink:href="assets/images/sprites/company/svg/symbols.svg#icon-vacancies"></use>
+						</svg>
+						<div class="company-info__group-data">
+							<b class="company-info__group-amount">21</b> Вакансій
+							<a class="company-info__group-data-link" href="javascript:">Переглянути</a>
+						</div>
+					</div>
+					<div class="company-info__group">
+						<svg class="custom-icon company-info__group-icon">
+							<use xlink:href="assets/images/sprites/company/svg/symbols.svg#icon-reviews"></use>
+						</svg>
+						<div class="company-info__group-data">
+							<b class="company-info__group-amount">14</b> Відгуки
+							<a class="company-info__group-data-link" href="javascript:">Прочитати</a>
+						</div>
+					</div>
+					<div class="company-info__group">
+						<svg class="custom-icon company-info__group-icon">
+							<use xlink:href="assets/images/sprites/company/svg/symbols.svg#icon-pictures"></use>
+						</svg>
+						<div class="company-info__group-data">
+							<b class="company-info__group-amount">0</b> Фотографій
+							<a class="company-info__group-data-link js-open-gallery" href="javascript:">Відкрити усі</a>
+						</div>
+					</div>
+					<div class="company-info__group">
+						<svg class="custom-icon company-info__group-icon">
+							<use xlink:href="assets/images/sprites/company/svg/symbols.svg#icon-link"></use>
+						</svg>
+						<div class="company-info__group-data">
+							<a class="company-info__group-link"
+							   href="https://ru.indeed.com/cmp/Levi9"
+							>https://ru.indeed.com/cmp/Levi9</a>
+						</div>
+					</div>
+				</div>
 			</section>
 			<!-- /Company info - indeed -->
 
 			<!-- Company info - you control -->
-			<section class="company-info box">
-				<header class="company-info__header">
+			<section class="company-info box js-company-info">
+				<header class="company-info__header js-company-info-header">
 					<figure class="company-info__header-logo">
 						<img class="company-info__header-image js-lazy"
 						     data-src="assets/images/logos/you-control-logo.svg"
@@ -370,12 +487,20 @@
 						</svg>
 					</button>
 				</header>
+				<div class="company-info__content js-company-info-content">
+					<div class="company-info__group company-info__group--empty">
+						<svg class="custom-icon company-info__group-icon company-info__group-icon--empty">
+							<use xlink:href="assets/images/sprites/company/svg/symbols.svg#icon-remove-circle"></use>
+						</svg>
+						<div class="company-info__group-data">На данній платформі, <span class="blue">відсутній профіль компанії.</span></div>
+					</div>
+				</div>
 			</section>
 			<!-- /Company info - you control -->
 
 			<!-- Company info - opendatabot -->
-			<section class="company-info box">
-				<header class="company-info__header">
+			<section class="company-info box js-company-info">
+				<header class="company-info__header js-company-info-header">
 					<figure class="company-info__header-logo">
 						<img class="company-info__header-image js-lazy"
 						     data-src="assets/images/logos/opendatabot-logo.png"
@@ -394,8 +519,64 @@
 						</svg>
 					</button>
 				</header>
+				<div class="company-info__content js-company-info-content">
+					<div class="company-info__group">
+						<svg class="custom-icon company-info__group-icon">
+							<use xlink:href="assets/images/sprites/company/svg/symbols.svg#icon-link"></use>
+						</svg>
+						<div class="company-info__group-data">
+							<a class="company-info__group-link"
+							   href="https://opendatabot.ua/c/31199015"
+							>https://opendatabot.ua/c/31199015</a>
+						</div>
+					</div>
+				</div>
 			</section>
 			<!-- /Company info - opendatabot -->
+
+			<!-- Company publications -->
+			<div class="publications">
+				<h2 class="publications__headline">Публікації про компанію:</h2>
+
+				<article class="publications__item box">
+					<header class="publications__item-header">
+						<p>Опубліковано : <time datetime="2020-05-20T12:03:00">20.05.2020 12:03</time></p>
+						<img width="134"
+						     height="42"
+						     alt=""
+						     src="assets/images/logos/seniorua-logo.svg"
+						>
+					</header>
+					<div class="publications__item-content">
+						<h3>Levi9 Ukraine IT-Компанія Основна інформація про компанію</h3>
+					</div>
+					<footer class="publications__item-footer">
+						<a href="javascript:">Прочитати статтю</a>
+					</footer>
+				</article>
+
+				<article class="publications__item box">
+					<header class="publications__item-header">
+						<p>Опубліковано : <time datetime="2020-05-20T12:03:00">20.05.2020 12:03</time></p>
+						<img width="134"
+						     height="42"
+						     alt=""
+						     src="assets/images/logos/seniorua-logo.svg"
+						>
+					</header>
+					<div class="publications__item-content">
+						<h3>Levi9 Ukraine IT-Компанія Основна інформація про компанію</h3>
+					</div>
+					<footer class="publications__item-footer">
+						<a href="javascript:">Прочитати статтю</a>
+					</footer>
+				</article>
+
+				<!-- Show more publications -->
+				<a class="custom-btn custom-btn--border-blue publications__btn-more" href="javascript:">Відкрити всі публікації</a>
+				<!-- /Show more publications -->
+			</div>
+			<!-- /Company publications -->
 
 		</div>
 

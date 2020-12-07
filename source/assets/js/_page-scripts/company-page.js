@@ -2,9 +2,10 @@
 
 /*---=== import modules ===---*/
 
-import {qS} from "../functions/querySelector";
+import {qS, qSA} from "../functions/querySelector";
 import aboutToggle from '../pages/company/about-toggle';
 import slider from  '../pages/company/slider';
+import companyInfo from '../components/toggleContent';
 
 /*---=== /import modules ===---*/
 
@@ -12,7 +13,9 @@ import slider from  '../pages/company/slider';
 
 const companyAbout = qS('.js-company-about');
 const truncatedText = '.js-truncated-text';
-const gallery = qS('.js-gallery');
+const galleryArr = qSA('.js-gallery');
+const galleryOpenArr = qSA('.js-open-gallery');
+const arrCompanyInfo = qSA('.js-company-info');
 
 /*---=== /declare variables ===---*/
 
@@ -20,12 +23,17 @@ const gallery = qS('.js-gallery');
 
 document.addEventListener("DOMContentLoaded", () => {
 
+	if (arrCompanyInfo.length > 0) {
+		console.log('11');
+		companyInfo(arrCompanyInfo,'.js-company-info-content', '.js-company-info-header');
+	}
+
 	if(companyAbout != null) {
 		aboutToggle(truncatedText);
 	}
 
-	if(gallery !== null) {
-		slider();
+	if(galleryArr.length > 0) {
+		slider(galleryOpenArr);
 	}
 
 });

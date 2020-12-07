@@ -1,0 +1,27 @@
+.publications {
+	$_this: &;
+
+	margin-top: 40px;
+
+	&__headline {
+		font-size: 18px;
+		color: #2B2B2B;
+	}
+
+	&__item {
+		margin-top: 26px;
+	}
+
+	&__item-header {
+
+	}
+
+	&__item-content {
+
+	}
+
+	&__btn-more {
+		height: 56px;
+		margin-top: 34px;
+	}
+}

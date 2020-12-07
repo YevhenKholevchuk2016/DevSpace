@@ -35,4 +35,17 @@
 			background-color: #a8a2a2;
 		}
 	}
+
+	&--border-blue {
+		font-size: 18px;
+		color: #7388FF;
+		border-color: #7388FF;
+		cursor: pointer;
+
+		&:hover,
+		&:active {
+			color: #ffffff;
+			background-color: #7388FF;
+		}
+	}
 }
