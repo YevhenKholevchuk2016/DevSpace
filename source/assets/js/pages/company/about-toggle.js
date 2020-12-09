@@ -1,4 +1,4 @@
-import Cuttr from 'Cuttr';
+import Cuttr from 'cuttr/dist/cuttr';
 export default truncatedText => {
 	new Cuttr(truncatedText, {
 		truncate: 'characters',

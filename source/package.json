@@ -34,6 +34,7 @@
 		"babelify": "10.0.0",
 		"browser-sync": "2.26.12",
 		"browserify": "16.5.2",
+		"cuttr": "1.2.0",
 		"del": "5.1.0",
 		"event-stream": "4.0.1",
 		"glob": "7.1.6",
@@ -67,7 +68,6 @@
 	},
 	"dependencies": {
 		"axios": "0.20.0",
-		"cuttr": "^1.2.0",
 		"fuse.js": "3.6.1",
 		"glightbox": "^3.0.6"
 	}
