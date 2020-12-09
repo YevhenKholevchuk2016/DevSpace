@@ -37,15 +37,13 @@
 	}
 
 	&--border-blue {
-		font-size: 18px;
-		color: #7388FF;
-		border-color: #7388FF;
-		cursor: pointer;
+		color: #7388ff;
+		border-color: #7388ff;
 
 		&:hover,
 		&:active {
 			color: #ffffff;
-			background-color: #7388FF;
+			background-color: #7388ff;
 		}
 	}
 }

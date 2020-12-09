@@ -24,7 +24,6 @@ const arrCompanyInfo = qSA('.js-company-info');
 document.addEventListener("DOMContentLoaded", () => {
 
 	if (arrCompanyInfo.length > 0) {
-		console.log('11');
 		companyInfo(arrCompanyInfo,'.js-company-info-content', '.js-company-info-header');
 	}
 
