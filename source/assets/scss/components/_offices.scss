@@ -1,0 +1,73 @@
+.offices {
+	$this: &;
+
+	&__link-outer {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	&__link {
+		font-size: 16px;
+		font-weight: 700;
+		color: #7388ff;
+		cursor: pointer;
+		display: inline-flex;
+		white-space: nowrap;
+		margin-right: 16px;
+
+		&:hover {
+
+			#{$this}__link-text {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	&__link-icon {
+		width: 22px;
+		height: 18px;
+		margin-left: 4px;
+	}
+
+	&__address {
+		font-size: 16px;
+		line-height: 24px;
+		color: #606060;
+		margin-left: 16px;
+	}
+
+	&__address-item {
+		position: relative;
+
+		&:before {
+			content: ' ';
+			position: absolute;
+			top: 7px;
+			left: -16px;
+			width: 8px;
+			height: 8px;
+			border-radius: 50%;
+			background-color: #dadada;
+		}
+	}
+
+	&__address-item-link {
+		color: #7388ff;
+	}
+
+	&__button {
+		font-size: 16px;
+		font-weight: 700;
+		color: #7388FF;
+		text-align: center;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-top: 1px solid #d8d8d8;
+		height: 70px;
+		margin-bottom: -25px;
+		margin-left: -16px;
+		margin-right: -16px;
+		cursor: pointer;
+	}
+}

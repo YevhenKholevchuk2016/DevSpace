@@ -1,5 +1,6 @@
 .company-info {
 	$this: &;
+
 	margin-top: 32px;
 
 	&.is-open {
@@ -162,5 +163,16 @@
 
 	&__rating {
 		margin-left: auto;
+	}
+
+	&--offices {
+		margin-top: 40px;
+
+		#{$this}__header-headline {
+			font-size: 18px;
+			color: #2B2B2B;
+			line-height: 27px;
+			margin-left: 0;
+		}
 	}
 }
