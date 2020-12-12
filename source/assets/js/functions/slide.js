@@ -23,12 +23,10 @@ export function slideUp(target, duration = 500) {
 		target.style.removeProperty('overflow');
 		target.style.removeProperty('transition-duration');
 		target.style.removeProperty('transition-property');
-		target.removeAttribute('style');
 	}, duration);
 }
 
-export function slideDown(target, duration = 500, blockType = 'block') {
-	target.style.removeProperty('display');
+export function slideDown(target, duration = 1500, blockType = 'block') {
 	let display = window.getComputedStyle(target).display;
 
 	if (display === 'none') {

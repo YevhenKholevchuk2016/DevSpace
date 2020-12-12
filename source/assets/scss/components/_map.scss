@@ -1,0 +1,16 @@
+.map {
+	height: 460px;
+	margin-top: 24px;
+	border-radius: 4px;
+	position: relative;
+
+	&__container {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: inherit;
+		border-radius: 4px;
+		overflow: hidden;
+	}
+}
