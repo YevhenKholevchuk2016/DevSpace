@@ -7,15 +7,40 @@
 		padding-bottom: 0;
 	}
 
+	&__header {
+
+		@include for-laptop-up {
+			padding-left: 26px;
+			padding-right: 26px;
+		}
+	}
+
 	&__list {
 		padding-left: 16px;
 		padding-right: 16px;
+
+		@include for-laptop-up {
+			display: grid;
+			gap: 16px 55px;
+			grid-template-columns: repeat(auto-fit, minmax(306px, 1fr));
+			padding-left: 26px;
+			padding-right: 26px;
+		}
+
+		@include for-desktop-up {
+			column-gap: 46px;
+			grid-template-columns: repeat(auto-fit, minmax(328px, 1fr));
+		}
 	}
 
 	&__list-item {
 
 		& + #{$this}__list-item {
 			margin-top: 16px;
+
+			@include for-laptop-up {
+				margin-top: 0;
+			}
 		}
 	}
 
@@ -91,5 +116,11 @@
 		height: 70px;
 		margin-top: 24px;
 		cursor: pointer;
+
+		@include for-laptop-up {
+			width: calc(100% - 80px);
+			margin-left: auto;
+			margin-right: auto;
+		}
 	}
 }

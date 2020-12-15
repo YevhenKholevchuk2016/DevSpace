@@ -5,9 +5,6 @@ export default (arrContent, classNameBody, classNameHead) => {
 		const arrContentTouch = classNameHead
 			? elem.querySelector(`${classNameHead}`)
 			: elem;
-		/*setTimeout(() => {
-			arrContentTouch.click();
-		}, 1);*/
 		arrContentTouch.addEventListener('click', () => {
 			slideToggle(
 				elem.classList.toggle('is-open'),

@@ -26,7 +26,7 @@ export function slideUp(target, duration = 500) {
 	}, duration);
 }
 
-export function slideDown(target, duration = 1500, blockType = 'block') {
+export function slideDown(target, duration = 500, blockType = 'block') {
 	let display = window.getComputedStyle(target).display;
 
 	if (display === 'none') {

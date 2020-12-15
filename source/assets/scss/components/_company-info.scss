@@ -3,6 +3,10 @@
 
 	margin-top: 32px;
 
+	@include for-laptop-up {
+		width: 100%;
+	}
+
 	&.is-open {
 
 		#{$this}__header-button {
@@ -61,10 +65,10 @@
 	}
 
 	&__content {
-		padding-top: 16px;
-		padding-left: 16px;
-		padding-right: 16px;
-		padding-bottom: 25px;
+		padding-top: 24px;
+		padding-left: 18px;
+		padding-right: 18px;
+		padding-bottom: 24px;
 		border-top: 1px solid #D8D8D8;
 	}
 
@@ -161,11 +165,16 @@
 	}
 
 	&__rating {
-		margin-left: auto;
+		margin-right: auto;
+		margin-left: 10px;
 	}
 
 	&--offices {
 		margin-top: 40px;
+
+		@include for-laptop-up {
+			margin-top: 64px;
+		}
 
 		#{$this}__header-headline {
 			font-size: 18px;

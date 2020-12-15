@@ -3,13 +3,50 @@
 
 	margin-top: 40px;
 
+	@include for-laptop-up {
+		width: 100%;
+		margin-top: 64px;
+	}
+
 	&__headline {
 		font-size: 18px;
 		color: #2B2B2B;
 	}
 
-	&__item {
+	&__list {
 		margin-top: 26px;
+
+		@include for-laptop-up {
+			display: grid;
+			gap: 30px;
+			grid-template-columns: repeat(auto-fit, minmax(288px, 1fr));
+		}
+	}
+
+	&__item {
+
+		& + #{$_this}__item {
+			margin-top: 26px;
+
+			@include for-laptop-up {
+				margin-top: 0;
+			}
+		}
+
+		&:nth-child(2) ~ .publications__item {
+			display: none;
+
+			@include for-desktop-up {
+				display: block;
+			}
+		}
+
+		@include for-desktop-up {
+
+			&:nth-child(3) ~ .publications__item {
+				display: none;
+			}
+		}
 	}
 
 	&__item-header {
@@ -74,5 +111,9 @@
 		cursor: pointer;
 		height: 56px;
 		margin-top: 34px;
+
+		@include for-laptop-up {
+			margin-top: 24px;
+		}
 	}
 }
