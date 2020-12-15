@@ -31,6 +31,34 @@
 				align-self: flex-start;
 				margin-top: 0;
 				margin-left: 30px;
+
+				.company-info__content {
+					padding-top: 24px;
+					padding-bottom: 24px;
+				}
+
+				.company-info__group-wrapper {
+					display: block;
+				}
+
+				.company-info__group {
+					margin-top: 0;
+					margin-bottom: 0;
+					flex: 0 1 auto;
+
+					& + .company-info__group {
+						margin-top: 16px;
+						margin-bottom: 0;
+					}
+
+					&:nth-child(even) {
+						padding: 0;
+					}
+
+					&:nth-child(odd) {
+						padding: 0;
+					}
+				}
 			}
 		}
 

@@ -70,6 +70,19 @@
 		padding-right: 18px;
 		padding-bottom: 24px;
 		border-top: 1px solid #D8D8D8;
+
+		@include for-laptop-up {
+			padding-top: 16px;
+			padding-bottom: 22px;
+		}
+	}
+
+	&__group-wrapper {
+
+		@include for-laptop-up {
+			display: flex;
+			flex-wrap: wrap;
+		}
 	}
 
 	&__group {
@@ -78,6 +91,10 @@
 
 		& + #{$this}__group {
 			margin-top: 16px;
+
+			@include for-laptop-up {
+				margin-top: 8px;
+			}
 		}
 
 		&--votes {
@@ -96,6 +113,20 @@
 				font-size: 18px;
 				line-height: 25px;
 				display: block;
+			}
+		}
+
+		@include for-laptop-up {
+			flex: 1 0 50%;
+			margin-top: 8px;
+			margin-bottom: 8px;
+
+			&:nth-child(even) {
+				padding-left: 15px;
+			}
+
+			&:nth-child(odd) {
+				padding-right: 15px;
 			}
 		}
 	}

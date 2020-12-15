@@ -10,7 +10,6 @@ import {script, scriptBuild} from './gulp-tasks/scripts';
 import {injectString} from './gulp-tasks/injectString';
 import spritesBuild from './gulp-tasks/spritesBuild';
 import images from './gulp-tasks/image';
-import json from './gulp-tasks/json';
 import html from './gulp-tasks/html';
 import favicon from "./gulp-tasks/favicon";
 import {publicSource, devSource, watchSource} from './gulp-tasks/pathSrc';
@@ -72,9 +71,6 @@ task('svg-sprite', cb => spritesBuild(
 //create image min
 task('images', cb => images(cb, [devSource.images, devSource.excludeSprites, devSource.excludeFavicon], publicSource.images));
 
-//copy json
-task('json', cb => json(cb, [devSource.json], publicSource.json));
-
 //create favicon
 task('favicon', cb => favicon(cb, devSource.favicon, publicSource.faviconBuild));
 
@@ -104,7 +100,6 @@ task('build', series(
 	'html',
 	'images',
 	'svg-sprite',
-	'json',
 	'favicon'
 ));
 
@@ -117,6 +112,5 @@ task('default', series(
 	'html',
 	'images',
 	'svg-sprite',
-	'json',
 	parallel('watch', 'serve')
 ));
