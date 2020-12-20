@@ -2,6 +2,12 @@
 	$this: &;
 
 	margin-top: 32px;
+	transition: box-shadow .225s ease,
+				flex-basis .225s ease;
+
+	&:hover {
+		box-shadow: 0 4px 11px 3px rgba(115, 136, 255, .32);
+	}
 
 	@include for-laptop-up {
 		width: 100%;
@@ -83,6 +89,19 @@
 			display: flex;
 			flex-wrap: wrap;
 		}
+	}
+
+	&__group-base {
+		width: 100%;
+
+		@include for-laptop-up {
+			display: inherit;
+			flex-wrap: inherit;
+		}
+	}
+
+	&__group-photo {
+		margin-top: 16px;
 	}
 
 	&__group {

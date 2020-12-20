@@ -51,10 +51,7 @@
 						margin-bottom: 0;
 					}
 
-					&:nth-child(even) {
-						padding: 0;
-					}
-
+					&:nth-child(even),
 					&:nth-child(odd) {
 						padding: 0;
 					}
@@ -64,6 +61,26 @@
 
 		@include for-desktop-up {
 			flex-basis: 370px;
+			flex-grow: 0;
+
+			& + .company-info {
+
+				.company-info__group-wrapper {
+					display: flex;
+					flex-wrap: nowrap;
+				}
+
+				.company-info__group-base {
+					display: block;
+					flex-basis: 50%;
+				}
+
+				.company-info__group-photo {
+					margin-top: 0;
+					flex-basis: 50%;
+					margin-left: 50px;
+				}
+			}
 		}
 	}
 }
