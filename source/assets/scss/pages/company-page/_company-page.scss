@@ -11,11 +11,18 @@
 		}
 	}
 
-	&__overlay {
+	&__info-wrapper {
 
 		@include for-laptop-up {
 			display: flex;
 			flex-wrap: wrap;
+		}
+
+		@include for-desktop-up {
+			position: relative;
+			padding-left: 400px;
+			min-height: var(--company-about-height);
+			align-content: flex-start;
 		}
 	}
 
@@ -60,10 +67,14 @@
 		}
 
 		@include for-desktop-up {
-			flex-basis: 370px;
+			position: absolute;
+			left: 0;
+			top: 0;
+			max-width: 370px;
 			flex-grow: 0;
 
 			& + .company-info {
+				margin-left: 0;
 
 				.company-info__group-wrapper {
 					display: flex;

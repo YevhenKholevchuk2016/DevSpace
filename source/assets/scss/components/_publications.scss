@@ -8,9 +8,17 @@
 		margin-top: 64px;
 	}
 
+	@include for-desktop-up {
+		text-align: center;
+	}
+
 	&__headline {
 		font-size: 18px;
 		color: #2B2B2B;
+
+		@include for-desktop-up {
+			text-align: left;
+		}
 	}
 
 	&__list {
@@ -20,6 +28,10 @@
 			display: grid;
 			gap: 30px;
 			grid-template-columns: repeat(auto-fit, minmax(288px, 1fr));
+		}
+
+		@include for-desktop-up {
+			text-align: left;
 		}
 	}
 
@@ -114,6 +126,10 @@
 
 		@include for-laptop-up {
 			margin-top: 24px;
+		}
+
+		@include for-desktop-up {
+			max-width: 370px;
 		}
 	}
 }

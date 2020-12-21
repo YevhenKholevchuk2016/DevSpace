@@ -6,6 +6,7 @@ import {qS, qSA} from "../functions/querySelector";
 import aboutToggle from '../pages/company/about-toggle';
 import slider from  '../pages/company/slider';
 import companyInfo from '../components/toggleContent';
+import setHeight from "../pages/company/setHeight";
 
 /*---=== /import modules ===---*/
 
@@ -16,6 +17,8 @@ const truncatedText = '.js-truncated-text';
 const galleryArr = qSA('.js-gallery');
 const galleryOpenArr = qSA('.js-open-gallery');
 const arrCompanyInfo = qSA('.js-company-info');
+const companyInfoWrapper = qS('.js-company-info-wrapper');
+const readMoreButton = qS('.company-extended__buttons');
 
 /*---=== /declare variables ===---*/
 
@@ -28,7 +31,8 @@ document.addEventListener("DOMContentLoaded", () => {
 	}
 
 	if(companyAbout != null) {
-		aboutToggle(truncatedText);
+		aboutToggle(truncatedText, readMoreButton, companyInfoWrapper, companyAbout);
+		setHeight(companyInfoWrapper, companyAbout);
 	}
 
 	if(galleryArr.length > 0) {
